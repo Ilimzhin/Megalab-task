@@ -2,58 +2,48 @@ package fifthWeek.shape;
 
 public class Rectangle extends Shape{
 
-    private int x1Rectangle;
-    private int y1Rectangle;
-    private int x2Rectangle;
-    private int y2Rectangle;
+    private int widthRectangle;
+    private int lengthRectangle;
 
-    public Rectangle(String color, int x1Rectangle) {
+    public Rectangle(String color, int widthRectangle, int lengthRectangle) {
         super(color);
-        this.x1Rectangle = x1Rectangle;
+        this.widthRectangle = widthRectangle;
+        this.lengthRectangle = lengthRectangle;
+        draw();
     }
 
-    public Rectangle(String color, int x1Rectangle, int y1Rectangle, int x2Rectangle, int y2Rectangle) {
-        super(color);
-        this.x1Rectangle = x1Rectangle;
-        this.y1Rectangle = y1Rectangle;
-        this.x2Rectangle = x2Rectangle;
-        this.y2Rectangle = y2Rectangle;
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "color=" + getColor() +
+                ", widthRectangle=" + widthRectangle +
+                ", lengthRectangle=" + lengthRectangle +
+                '}';
     }
 
     @Override
     void draw() {
-        System.out.println("some");
+        for (int i = 0; i < lengthRectangle; i++) {
+            for (int j = 0; j < widthRectangle; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+    public int getWidthRectangle() {
+        return widthRectangle;
     }
 
-    public int getX1Rectangle() {
-        return x1Rectangle;
+    public void setWidthRectangle(int widthRectangle) {
+        this.widthRectangle = widthRectangle;
     }
 
-    public void setX1Rectangle(int x1Rectangle) {
-        this.x1Rectangle = x1Rectangle;
+    public int getLengthRectangle() {
+        return lengthRectangle;
     }
 
-    public int getY1Rectangle() {
-        return y1Rectangle;
+    public void setLengthRectangle(int lengthRectangle) {
+        this.lengthRectangle = lengthRectangle;
     }
 
-    public void setY1Rectangle(int y1Rectangle) {
-        this.y1Rectangle = y1Rectangle;
-    }
-
-    public int getX2Rectangle() {
-        return x2Rectangle;
-    }
-
-    public void setX2Rectangle(int x2Rectangle) {
-        this.x2Rectangle = x2Rectangle;
-    }
-
-    public int getY2Rectangle() {
-        return y2Rectangle;
-    }
-
-    public void setY2Rectangle(int y2Rectangle) {
-        this.y2Rectangle = y2Rectangle;
-    }
 }
