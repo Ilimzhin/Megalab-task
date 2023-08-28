@@ -2,43 +2,33 @@ package fifthWeek.shape;
 
 public class Circle extends Shape{
 
-    private int xCircle;
-    private int yCircle;
-    private int pointCircle;
+    private int radius;
 
-    public Circle(String color, int xCircle, int yCircle, int pointCircle) {
+    public Circle(String color, int radius) {
         super(color);
-        this.xCircle = xCircle;
-        this.yCircle = yCircle;
-        this.pointCircle = pointCircle;
+        this.radius = radius;
+        draw();
     }
 
     @Override
     void draw() {
-        System.out.println("Something");
+        for (int i = -radius; i <= radius; i++) {
+            for (int j = -radius; j <= radius; j++) {
+                if (i * i + j * j <= radius * radius) {
+                    System.out.print("*  ");
+//                    try {
+//                        Thread.sleep(10);
+//                    } catch (InterruptedException e) {
+//                        throw new RuntimeException(e);
+//                    }
+                } else {
+                    System.out.print("   ");
+                }
+            }
+            System.out.println();
+
+        }
     }
 
-    public int getxCircle() {
-        return xCircle;
-    }
 
-    public void setxCircle(int xCircle) {
-        this.xCircle = xCircle;
-    }
-
-    public int getyCircle() {
-        return yCircle;
-    }
-
-    public void setyCircle(int yCircle) {
-        this.yCircle = yCircle;
-    }
-
-    public int getPointCircle() {
-        return pointCircle;
-    }
-
-    public void setPointCircle(int pointCircle) {
-        this.pointCircle = pointCircle;
-    }
 }
