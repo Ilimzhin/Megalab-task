@@ -1,4 +1,4 @@
-package fifthWeek;
+package fifthWeek.shape;
 
 public abstract class Shape {
 
