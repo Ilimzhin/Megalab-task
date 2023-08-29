@@ -5,6 +5,7 @@ public class Rectangle extends Shape{
     private int widthRectangle;
     private int lengthRectangle;
 
+
     public Rectangle(String color, int widthRectangle, int lengthRectangle) {
         super(color);
         this.widthRectangle = widthRectangle;
@@ -23,9 +24,26 @@ public class Rectangle extends Shape{
 
     @Override
     void draw() {
+
+        for (int i = 0; i <= widthRectangle+1; i++) {
+            System.out.print("*  ");
+        }
+        System.out.println();
+        for (int i = 0; i < lengthRectangle; i++) {
+            System.out.print("*");
+            for (int j = 0; j < widthRectangle; j++) {
+                System.out.print("   ");
+            }
+            System.out.println("  *");
+
+        }
+        for (int i = 0; i <= widthRectangle+1; i++) {
+            System.out.print("*  ");
+        }
+        System.out.println("\n\n\n");
         for (int i = 0; i < lengthRectangle; i++) {
             for (int j = 0; j < widthRectangle; j++) {
-                System.out.print("* ");
+                System.out.print("*  ");
             }
             System.out.println();
         }

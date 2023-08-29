@@ -16,11 +16,11 @@ public class Circle extends Shape{
             for (int j = -radius; j <= radius; j++) {
                 if (i * i + j * j <= radius * radius) {
                     System.out.print("*  ");
-//                    try {
-//                        Thread.sleep(10);
-//                    } catch (InterruptedException e) {
-//                        throw new RuntimeException(e);
-//                    }
+                    try {
+                        Thread.sleep(10);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
                 } else {
                     System.out.print("   ");
                 }
