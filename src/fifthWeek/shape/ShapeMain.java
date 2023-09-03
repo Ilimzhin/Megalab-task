@@ -5,7 +5,7 @@ package fifthWeek.shape;
 public class ShapeMain {
     public static void main(String[] args) {
         Shape rectangle1 = new Rectangle("yellow",20,6);
-        Shape circle1 = new Circle("Black", 15);
+        Shape circle1 = new Circle("Black", 10);
         System.out.println(rectangle1);
         System.out.println(circle1);
 
